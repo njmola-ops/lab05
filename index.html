@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Environment 03</title>
+    <link rel="stylesheet" href="env04.css">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="env04.js" defer></script>
+</head>
+<body>
+    <h1> WELCOME TO SPACE </h1>
+   <div>
+     <p>
+    There's a lot we don't know about our universe. Is there other life out there? Who can say? I'd like to think there are entire worlds and civilizations we can't even fathom. Have they created arbitrary social hierarchies like we have? Or are they smarter than that? What does their popculture look like? Do aliens make movies? Are their films anything like ours? One can only imagine.
+</p>
+ <p>
+    This is a sort of imagined alien utopia. No laws, no wrongdoing, no needless suffering. The aliens don't need social constructs, oxygen, or any of that human junk. This galaxy is a party that never ends. Feel free to stay for a while. Enjoy the music!
+</p>
+<p>
+  <div class="sound">
+  <audio id="sound">
+    <source src="leberch-cinematic-space-510707.ogg" type="audio/ogg">
+    <source src="leberch-cinematic-space-510707.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="playBtn">Play Sound</button>
+</div>
+</p>
+</div>
+<p>
+    <button id="redb" onclick="switchImage()">CLICK TO DETONATE</button>
+    <button id="greenb" onclick="resetImages()">CLICK TO REPAIR</button>
+
+<div id="environment-output"></div>
+<div class="shipz">
+<div style="display: flex; justify-content: center;">
+<img id= "ships 1" src="https://media.tenor.com/ieEyOumk_AoAAAAj/ufo-spaceship.gif">
+<img id= "ships 2" src="https://img1.picmix.com/output/stamp/normal/2/1/2/6/2726212_c5618.gif">
+<img id= "ships 3" src="https://giffiles.alphacoders.com/164/16462.gif">
+<img id= "ships 4" src="https://64.media.tumblr.com/5c428b0416dea253ae680f7688a41e9b/tumblr_mmv8c3IiTO1sqhtkyo1_250.gif">
+</div>
+<script>
+function switchImage() {
+  const images = document.querySelectorAll(".shipz img");
+
+  images.forEach(img => {
+    img.src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTV6ZmM1cXloMm82NGlkN2cwb2t1MzBiMDI4cXE2YnVxejllb3RlbiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/SuIuH9rnQHuzMkerDv/200.webp";
+  });
+}
+const explosion = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTV6ZmM1cXloMm82NGlkN2cwb2t1MzBiMDI4cXE2YnVxejllb3RlbiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/4Z9p5iVHTo3CWW1Lpe/giphy.webp";
+const images = document.querySelectorAll(".shipz img");
+const originalSources = [];
+
+images.forEach((img, index) => {
+  originalSources[index] = img.src;
+});
+
+function detonate() {
+  images.forEach(img => {
+    img.src = explosion;
+  });
+}
+
+function resetImages() {
+  images.forEach((img, index) => {
+    img.src = originalSources[index];
+  });
+}
+
+</script>
+</script>
+</div>
+<p>
+ <button id="good-button">What do you want to see?</button>
+</p>
+<h2 button id="lifebutton">Click to Scan for Extraterrestrial Lifeforms</button></h2>
+
+  <h2><button id="rockbutton">Click to Scan for Space Debris</button></h2>
+</div>
+</div>
+ 
+   <div id="output"></div>
+
+
+<div class="rocks">
+
+     <p> The planets have aligned... </p>
+<div style="display: flex; justify-content: center;">
+<img id="planets" src="https://i10.glitter-graphics.org/pub/2544/2544290exe4a5nfr9.gif">
+
+  <img id="sun" src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUydTJ1Y3RuM2gyNzhycnptenQyeXIxeTk0ZTUzaGYybWFmcTRpeTNvNSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/YqL7wobl36TXvw4SxO/200w.gif">
+</div>
+</div>
+<div>
+<a href="https://njmola-ops.github.io/Art-101/" target="_blank">
+    <button id="homebutton">Click to Go Home</button>
+</div>
+</a>
+</body>
+</html>
